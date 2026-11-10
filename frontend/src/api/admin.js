@@ -1,0 +1,21 @@
+import http from './index';
+
+export const users = (params) => http.get('/admin/users', { params });
+export const updateUser = (id, data) => http.put(`/admin/users/${id}`, data);
+export const deleteUser = (id) => http.delete(`/admin/users/${id}`);
+export const orders = (params) => http.get('/admin/orders', { params });
+export const updateOrder = (id, data) => http.put(`/admin/orders/${id}`, data);
+export const courses = (params) => http.get('/admin/courses', { params });
+export const setCourseStatus = (id, data) => http.put(`/admin/courses/${id}/status`, data);
+export const saveCourse = (data) => http.post('/admin/courses', data);
+export const updateCourse = (id, data) => http.put(`/admin/courses/${id}`, data);
+export const jobs = (params) => http.get('/admin/jobs', { params });
+export const setJobStatus = (id, data) => http.put(`/admin/jobs/${id}/status`, data);
+export const saveJob = (data) => http.post('/admin/jobs', data);
+export const updateJob = (id, data) => http.put(`/admin/jobs/${id}`, data);
+export const applications = (params) => http.get('/admin/applications', { params });
+export const updateApplication = (id, data) => http.put(`/admin/applications/${id}`, data);
+export const instructors = () => http.get('/admin/instructors');
+export const saveInstructor = (data) => http.post('/admin/instructors', data);
+export const companies = () => http.get('/admin/companies');
+export const saveCompany = (data) => http.post('/admin/companies', data);

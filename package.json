@@ -1,0 +1,19 @@
+{
+  "name": "smart-edu-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "面向教育平台的智能体开发 - 智慧教育平台",
+  "scripts": {
+    "install:all": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev": "concurrently \"npm:dev:backend\" \"npm:dev:frontend\"",
+    "build:frontend": "npm --prefix frontend run build",
+    "start:backend": "npm --prefix backend start",
+    "db:init": "npm --prefix backend run db:init",
+    "db:seed": "npm --prefix backend run db:seed"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
